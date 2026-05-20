@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad — InterCoom</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            padding: 48px 24px 32px;
+            text-align: center;
+            border-bottom: 1px solid #7c4dff33;
+        }
+        .logo { font-size: 48px; margin-bottom: 12px; }
+        .header h1 { color: #00e5ff; font-size: 28px; font-weight: 700; }
+        .header p { color: #9e9e9e; margin-top: 8px; font-size: 14px; }
+        .container { max-width: 860px; margin: 0 auto; padding: 40px 24px; }
+        h2 {
+            color: #7c4dff;
+            font-size: 20px;
+            margin: 36px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #7c4dff33;
+        }
+        h3 { color: #00e5ff; font-size: 16px; margin: 20px 0 8px; }
+        p { color: #bdbdbd; margin-bottom: 12px; }
+        ul { margin: 8px 0 16px 24px; color: #bdbdbd; }
+        li { margin-bottom: 6px; }
+        a { color: #00e5ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .chip {
+            display: inline-block;
+            background: #7c4dff22;
+            border: 1px solid #7c4dff55;
+            color: #b388ff;
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 13px;
+            margin: 4px 4px 4px 0;
+        }
+        .updated {
+            background: #1a2744;
+            border-left: 3px solid #00e5ff;
+            padding: 12px 16px;
+            margin-bottom: 32px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: #9e9e9e;
+        }
+        .footer {
+            text-align: center;
+            padding: 32px;
+            color: #616161;
+            font-size: 13px;
+            border-top: 1px solid #1e1e2e;
+            margin-top: 40px;
+        }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th { background: #1a1a2e; color: #00e5ff; padding: 10px 14px; text-align: left; font-size: 14px; }
+        td { padding: 10px 14px; border-bottom: 1px solid #1e1e2e; color: #bdbdbd; font-size: 14px; }
+        tr:hover td { background: #1a1a2e55; }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">📡</div>
+    <h1>Política de Privacidad</h1>
+    <p>InterCoom — Aplicación de intercomunicador y comunicación en red local</p>
+</div>
+
+<div class="container">
+
+    <div class="updated">
+        📅 Última actualización: 20 de mayo de 2026 &nbsp;|&nbsp;
+        Desarrollado por: Byron Leonel Montoya Barrionuevo &nbsp;|&nbsp;
+        País: Ecuador
+    </div>
+
+    <p>
+        Bienvenido a <strong>InterCoom</strong>. Esta Política de Privacidad explica cómo recopilamos,
+        usamos, almacenamos y protegemos tu información personal cuando utilizas nuestra aplicación.
+        Al usar InterCoom, aceptas los términos descritos en este documento.
+    </p>
+
+    <!-- ─── 1. QUIÉN SOMOS ─────────────────────────────────────────────── -->
+    <h2>1. Responsable del Tratamiento de Datos</h2>
+    <p>
+        <strong>Nombre:</strong> Byron Leonel Montoya Barrionuevo<br>
+        <strong>Aplicación:</strong> InterCoom<br>
+        <strong>Contacto:</strong> <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a><br>
+        <strong>País:</strong> Ecuador
+    </p>
+
+    <!-- ─── 2. QUÉ DATOS RECOPILAMOS ─────────────────────────────────────── -->
+    <h2>2. Datos que Recopilamos</h2>
+
+    <h3>2.1 Datos que tú nos proporcionas</h3>
+    <ul>
+        <li>Nombre de usuario o apodo (visible para otros usuarios en la red)</li>
+        <li>Foto de perfil (opcional, almacenada localmente en el dispositivo)</li>
+        <li>Mensajes de texto enviados en los chats (transmitidos a través de la red local)</li>
+        <li>Archivos adjuntos que eliges compartir (imágenes, documentos, audio)</li>
+    </ul>
+
+    <h3>2.2 Datos recopilados automáticamente</h3>
+    <ul>
+        <li>Identificador de dispositivo anónimo (Firebase Auth UID — no vinculado a tu identidad real)</li>
+        <li>Fecha de creación de la cuenta (para gestionar el período de prueba gratuita de 20 días)</li>
+        <li>Estado Premium / Free (almacenado en Firebase Firestore)</li>
+        <li>Token de compra de Google Play (para activar y validar la licencia Premium)</li>
+    </ul>
+
+    <h3>2.3 Datos de uso y diagnóstico</h3>
+    <ul>
+        <li>Datos básicos de rendimiento y errores (recopilados por Firebase)</li>
+        <li>Datos de publicidad anonimizados (recopilados por Google AdMob para usuarios gratuitos)</li>
+    </ul>
+
+    <h3>2.4 Datos que NO recopilamos</h3>
+    <ul>
+        <li>No recopilamos nombre legal, correo electrónico ni número de teléfono (a menos que uses inicio de sesión con Google)</li>
+        <li>No recopilamos tu ubicación GPS permanentemente (solo si compartes una ubicación manualmente en el mapa)</li>
+        <li>No vendemos tus datos a terceros</li>
+        <li>No accedemos a tu contenido de llamadas de voz (el audio se transmite directamente entre dispositivos en la red local, no pasa por nuestros servidores)</li>
+    </ul>
+
+    <!-- ─── 3. USO DE LOS DATOS ────────────────────────────────────────────── -->
+    <h2>3. Cómo Usamos tus Datos</h2>
+    <table>
+        <tr>
+            <th>Dato</th>
+            <th>Finalidad</th>
+        </tr>
+        <tr>
+            <td>Firebase Auth UID</td>
+            <td>Identificar tu cuenta para sincronizar el estado Premium/Free y evitar el reinicio del período de prueba</td>
+        </tr>
+        <tr>
+            <td>Fecha de creación (createdAt)</td>
+            <td>Calcular los días restantes de prueba gratuita (20 días)</td>
+        </tr>
+        <tr>
+            <td>Token de compra Google Play</td>
+            <td>Validar que la compra es auténtica y evitar el uso de la misma licencia en múltiples cuentas</td>
+        </tr>
+        <tr>
+            <td>Mensajes y archivos</td>
+            <td>Transmitirlos a otros usuarios en la misma red local. No se almacenan en servidores externos.</td>
+        </tr>
+        <tr>
+            <td>Datos de AdMob</td>
+            <td>Mostrar anuncios relevantes a usuarios gratuitos para monetizar la app</td>
+        </tr>
+    </table>
+
+    <!-- ─── 4. TERCEROS ───────────────────────────────────────────────────── -->
+    <h2>4. Servicios de Terceros</h2>
+    <p>InterCoom utiliza los siguientes servicios de terceros que tienen sus propias políticas de privacidad:</p>
+
+    <h3><span class="chip">Google Firebase</span> Auth, Firestore, Storage, Functions</h3>
+    <p>
+        Usado para autenticación de usuarios, almacenamiento del estado Premium y validación de compras.
+        <a href="https://firebase.google.com/support/privacy" target="_blank">→ Política de privacidad de Firebase</a>
+    </p>
+
+    <h3><span class="chip">Google AdMob</span> Publicidad</h3>
+    <p>
+        Usado para mostrar anuncios (banners y videos) a usuarios gratuitos. AdMob puede recopilar datos
+        del dispositivo para personalizar los anuncios según las leyes aplicables.
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank">→ Política de privacidad de AdMob</a><br>
+        Los usuarios Premium no ven anuncios.
+    </p>
+
+    <h3><span class="chip">Google Play Billing</span> Compras integradas</h3>
+    <p>
+        Procesamiento de la compra única de $3.99 para el plan Premium.
+        <a href="https://play.google.com/about/play-terms/" target="_blank">→ Términos de Google Play</a>
+    </p>
+
+    <h3><span class="chip">Google Nearby Connections</span> Comunicación local</h3>
+    <p>
+        Usado para descubrir y conectar dispositivos en la misma red Wi-Fi o Bluetooth.
+        El contenido de las comunicaciones no pasa por servidores de Google.
+    </p>
+
+    <!-- ─── 5. ALMACENAMIENTO Y SEGURIDAD ──────────────────────────────────── -->
+    <h2>5. Almacenamiento y Seguridad de los Datos</h2>
+    <ul>
+        <li>Los mensajes de chat se almacenan <strong>localmente</strong> en el dispositivo (base de datos Room cifrada por Android)</li>
+        <li>Las fotos de perfil se guardan en el almacenamiento privado del dispositivo (<code>filesDir</code>), inaccesible para otras apps</li>
+        <li>El estado Premium se almacena en <strong>Firebase Firestore</strong> con reglas de seguridad que impiden modificaciones no autorizadas</li>
+        <li>Los tokens de compra se almacenan en Firestore con acceso exclusivo del backend (nunca del cliente)</li>
+        <li>Las llamadas de voz se transmiten directamente entre dispositivos (peer-to-peer en LAN) — no pasan por servidores externos</li>
+    </ul>
+
+    <!-- ─── 6. RETENCIÓN ──────────────────────────────────────────────────── -->
+    <h2>6. Retención de Datos</h2>
+    <ul>
+        <li>Los mensajes locales se eliminan si desinstala la app o borra los datos de la app</li>
+        <li>Los datos de la cuenta Firebase (UID, estado Premium) se conservan mientras la cuenta exista</li>
+        <li>Puedes solicitar la eliminación de tu cuenta y datos enviando un correo a <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a></li>
+    </ul>
+
+    <!-- ─── 7. DERECHOS DEL USUARIO ──────────────────────────────────────── -->
+    <h2>7. Tus Derechos</h2>
+    <p>Dependiendo de tu país, puedes tener los siguientes derechos:</p>
+    <ul>
+        <li><strong>Acceso:</strong> Solicitar una copia de los datos que tenemos sobre ti</li>
+        <li><strong>Rectificación:</strong> Corregir datos incorrectos</li>
+        <li><strong>Eliminación:</strong> Solicitar que eliminemos tu cuenta y datos asociados</li>
+        <li><strong>Portabilidad:</strong> Recibir tus datos en un formato estructurado</li>
+        <li><strong>Oposición al tratamiento:</strong> Oponerte al uso de tus datos para publicidad personalizada</li>
+    </ul>
+    <p>
+        Para ejercer cualquiera de estos derechos, escríbenos a:
+        <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a>
+    </p>
+
+    <!-- ─── 8. NIÑOS ──────────────────────────────────────────────────────── -->
+    <h2>8. Protección de Menores</h2>
+    <p>
+        InterCoom está disponible para todos los públicos. No recopilamos intencionadamente
+        información personal de menores de 13 años sin el consentimiento de sus padres o tutores.
+        Si eres padre o tutor y crees que tu hijo nos ha proporcionado datos personales,
+        contáctanos en <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a> para eliminar
+        dicha información.
+    </p>
+
+    <!-- ─── 9. PUBLICIDAD ─────────────────────────────────────────────────── -->
+    <h2>9. Publicidad y Cómo Desactivarla</h2>
+    <p>
+        Los usuarios de la versión <strong>gratuita</strong> ven anuncios gestionados por Google AdMob.
+        Estos anuncios pueden ser personalizados según tus intereses y los datos de tu dispositivo.
+    </p>
+    <p>
+        Para optar por no recibir anuncios personalizados de Google:
+        <a href="https://adssettings.google.com" target="_blank">→ Configuración de anuncios de Google</a>
+    </p>
+    <p>
+        Alternativamente, al adquirir el plan <strong>Premium por $3.99</strong>, todos los anuncios
+        se eliminan permanentemente de la aplicación.
+    </p>
+
+    <!-- ─── 10. CAMBIOS ───────────────────────────────────────────────────── -->
+    <h2>10. Cambios en esta Política</h2>
+    <p>
+        Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos,
+        notificaremos a los usuarios a través de la aplicación y actualizaremos la fecha
+        de "Última actualización" en la parte superior de este documento.
+        Te recomendamos revisar esta política periódicamente.
+    </p>
+
+    <!-- ─── 11. CONTACTO ──────────────────────────────────────────────────── -->
+    <h2>11. Contacto</h2>
+    <p>
+        Si tienes preguntas, inquietudes o solicitudes relacionadas con tu privacidad, contáctanos:
+    </p>
+    <p>
+        📧 <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a><br>
+        🌍 Ecuador
+    </p>
+
+</div>
+
+<div class="footer">
+    © 2025 Byron Leonel Montoya Barrionuevo — InterCoom. Todos los derechos reservados.<br>
+    Esta política está disponible en: <strong>https://reos98.github.io/intercoom-privacy/privacy_policy.html</strong>
+</div>
+
+</body>
+</html>
