@@ -103,34 +103,42 @@
     <!-- ─── 2. QUÉ DATOS RECOPILAMOS ─────────────────────────────────────── -->
     <h2>2. Datos que Recopilamos</h2>
 
-    <h3>2.1 Datos que tú nos proporcionas</h3>
+    <h3>2.1 Datos de tu cuenta de Google (inicio de sesión obligatorio)</h3>
+    <p>InterCoom requiere inicio de sesión con Google. Al autenticarte, recopilamos desde tu cuenta de Google:</p>
     <ul>
-        <li>Nombre de usuario o apodo (visible para otros usuarios en la red)</li>
-        <li>Foto de perfil (opcional, almacenada localmente en el dispositivo)</li>
-        <li>Mensajes de texto enviados en los chats (transmitidos a través de la red local)</li>
-        <li>Archivos adjuntos que eliges compartir (imágenes, documentos, audio)</li>
+        <li><strong>Nombre y apellido</strong> — usado como nombre visible en la app</li>
+        <li><strong>Correo electrónico</strong> — usado como identificador único de tu cuenta</li>
+        <li><strong>Foto de perfil de Google</strong> (opcional) — mostrada a otros usuarios de la red</li>
+        <li><strong>UID de Firebase Auth</strong> — identificador interno para gestionar tu cuenta</li>
     </ul>
 
-    <h3>2.2 Datos recopilados automáticamente</h3>
+    <h3>2.2 Datos que tú generas al usar la app</h3>
     <ul>
-        <li>Identificador de dispositivo anónimo (Firebase Auth UID — no vinculado a tu identidad real)</li>
+        <li>Mensajes de texto enviados en los chats (almacenados localmente en tu dispositivo)</li>
+        <li>Archivos adjuntos que eliges compartir (imágenes, documentos, audio)</li>
+        <li>Foto de perfil personalizada (opcional, almacenada localmente en el dispositivo)</li>
+    </ul>
+
+    <h3>2.3 Datos recopilados automáticamente</h3>
+    <ul>
         <li>Fecha de creación de la cuenta (para gestionar el período de prueba gratuita de 20 días)</li>
         <li>Estado Premium / Free (almacenado en Firebase Firestore)</li>
         <li>Token de compra de Google Play (para activar y validar la licencia Premium)</li>
     </ul>
 
-    <h3>2.3 Datos de uso y diagnóstico</h3>
+    <h3>2.4 Datos de uso y publicidad</h3>
     <ul>
         <li>Datos básicos de rendimiento y errores (recopilados por Firebase)</li>
-        <li>Datos de publicidad anonimizados (recopilados por Google AdMob para usuarios gratuitos)</li>
+        <li>Datos de publicidad anonimizados (recopilados por Google AdMob para usuarios gratuitos — no se aplica a usuarios Premium)</li>
     </ul>
 
-    <h3>2.4 Datos que NO recopilamos</h3>
+    <h3>2.5 Datos que NO recopilamos</h3>
     <ul>
-        <li>No recopilamos nombre legal, correo electrónico ni número de teléfono (a menos que uses inicio de sesión con Google)</li>
-        <li>No recopilamos tu ubicación GPS permanentemente (solo si compartes una ubicación manualmente en el mapa)</li>
+        <li>No recopilamos tu número de teléfono</li>
+        <li>No recopilamos tu ubicación GPS de forma permanente (solo si compartes una ubicación manualmente en el mapa)</li>
         <li>No vendemos tus datos a terceros</li>
-        <li>No accedemos a tu contenido de llamadas de voz (el audio se transmite directamente entre dispositivos en la red local, no pasa por nuestros servidores)</li>
+        <li>No accedemos al contenido de tus llamadas de voz (el audio viaja directamente entre dispositivos en la red local, nunca pasa por nuestros servidores)</li>
+        <li>No almacenamos tus mensajes en servidores externos</li>
     </ul>
 
     <!-- ─── 3. USO DE LOS DATOS ────────────────────────────────────────────── -->
