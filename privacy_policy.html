@@ -80,15 +80,15 @@
 <div class="container">
 
     <div class="updated">
-        📅 Última actualización: 20 de mayo de 2026 &nbsp;|&nbsp;
+        📅 Última actualización: 17 de octubre de 2026 &nbsp;|&nbsp;
         Desarrollado por: Byron Leonel Montoya Barrionuevo &nbsp;|&nbsp;
         País: Ecuador
     </div>
 
     <p>
-        Bienvenido a <strong>InterCoom</strong>. Esta Política de Privacidad explica cómo recopilamos,
-        usamos, almacenamos y protegemos tu información personal cuando utilizas nuestra aplicación.
-        Al usar InterCoom, aceptas los términos descritos en este documento.
+        Bienvenido a <strong>InterCoom</strong>. Esta Política de Privacidad explica qué información
+        recopilamos, cómo la usamos, con quién se comparte y cómo la protegemos cuando utilizas nuestra
+        aplicación. Al usar InterCoom, aceptas los términos descritos en este documento.
     </p>
 
     <!-- ─── 1. QUIÉN SOMOS ─────────────────────────────────────────────── -->
@@ -103,42 +103,81 @@
     <!-- ─── 2. QUÉ DATOS RECOPILAMOS ─────────────────────────────────────── -->
     <h2>2. Datos que Recopilamos</h2>
 
-    <h3>2.1 Datos de tu cuenta de Google (inicio de sesión obligatorio)</h3>
-    <p>InterCoom requiere inicio de sesión con Google. Al autenticarte, recopilamos desde tu cuenta de Google:</p>
+    <h3>2.1 Si inicias sesión con Google (opcional)</h3>
+    <p>Puedes usar InterCoom con tu cuenta de Google o sin cuenta. Si eliges Google, recibimos de tu cuenta:</p>
     <ul>
-        <li><strong>Nombre y apellido</strong> — usado como nombre visible en la app</li>
-        <li><strong>Correo electrónico</strong> — usado como identificador único de tu cuenta</li>
-        <li><strong>Foto de perfil de Google</strong> (opcional) — mostrada a otros usuarios de la red</li>
-        <li><strong>UID de Firebase Auth</strong> — identificador interno para gestionar tu cuenta</li>
+        <li><strong>Nombre</strong> — usado como nombre visible en la app</li>
+        <li><strong>Correo electrónico</strong> — identifica tu cuenta</li>
+        <li><strong>UID de Firebase Auth</strong> — identificador interno para gestionar tu cuenta y tu estado Premium</li>
     </ul>
 
-    <h3>2.2 Datos que tú generas al usar la app</h3>
+    <h3>2.2 Si usas la app sin cuenta (modo invitado)</h3>
+    <p>
+        La app funciona sin cuenta y sin internet. Cuando hay internet, se crea una
+        <strong>cuenta anónima de Firebase</strong>: un identificador interno sin nombre, correo ni teléfono,
+        que sirve para validar compras y registrar la prueba gratuita. Si más tarde inicias sesión con Google,
+        esa cuenta anónima se une a tu cuenta de Google.
+    </p>
+
+    <h3>2.3 Identificador del teléfono para la prueba gratuita</h3>
+    <p>
+        Para que la prueba gratuita de 20 días no se reinicie al reinstalar la app, guardamos una
+        <strong>huella cifrada (SHA-256)</strong> del identificador que Android asigna a la app en tu teléfono,
+        junto con la fecha en que vimos ese teléfono por primera vez. Nunca guardamos el identificador original
+        y la huella no permite recuperarlo. Se usa solo para prevenir el abuso de la prueba gratuita.
+    </p>
+
+    <h3>2.4 Compras</h3>
     <ul>
-        <li>Mensajes de texto enviados en los chats (almacenados localmente en tu dispositivo)</li>
-        <li>Archivos adjuntos que eliges compartir (imágenes, documentos, audio)</li>
-        <li>Foto de perfil personalizada (opcional, almacenada localmente en el dispositivo)</li>
+        <li><strong>Estado Premium / Gratis</strong> — guardado en tu teléfono y en Firebase Firestore</li>
+        <li><strong>Token de compra de Google Play</strong> — para comprobar con Google que la compra es auténtica</li>
+        <li>El pago lo procesa Google Play. <strong>No vemos ni guardamos los datos de tu tarjeta</strong></li>
     </ul>
 
-    <h3>2.3 Datos recopilados automáticamente</h3>
+    <h3>2.5 Lo que compartes con otros teléfonos (directamente, sin pasar por servidores)</h3>
+    <p>
+        InterCoom conecta los teléfonos entre sí por Wi-Fi Direct o por la misma red Wi-Fi. Lo siguiente viaja
+        <strong>directamente de tu teléfono a los teléfonos conectados contigo</strong> y no pasa por nuestros
+        servidores ni por los de Google:
+    </p>
     <ul>
-        <li>Fecha de creación de la cuenta (para gestionar el período de prueba gratuita de 20 días)</li>
-        <li>Estado Premium / Free (almacenado en Firebase Firestore)</li>
-        <li>Token de compra de Google Play (para activar y validar la licencia Premium)</li>
+        <li>Nombre de dispositivo y foto de perfil que elijas</li>
+        <li>Mensajes, fotos, videos y archivos que envíes</li>
+        <li>Tu voz durante las llamadas (no se graba)</li>
+        <li><strong>Ubicación GPS:</strong> mientras la app está abierta y conectada, tu posición se envía cada pocos
+            segundos a los teléfonos conectados contigo para mostrarte en el mapa del grupo</li>
+        <li>Los puntos del mapa que compartas, con su foto si la añades</li>
     </ul>
+    <p>
+        Solo se envían a teléfonos de tu grupo Wi-Fi Direct (que entraron con tu código QR o cuya invitación
+        aceptaste) o a teléfonos que vinculaste con un PIN. Un teléfono desconocido en una red Wi-Fi compartida
+        aparece como "Sin verificar" y no recibe nada de lo anterior.
+    </p>
 
-    <h3>2.4 Datos de uso y publicidad</h3>
+    <h3>2.6 Publicidad (si no has comprado Premium)</h3>
+    <p>
+        La app muestra anuncios de Google AdMob a quien no ha comprado Premium: un banner cuando terminó la
+        prueba gratuita y, a veces, un anuncio de video al terminar una llamada (también durante la prueba).
+        El SDK de Google Mobile Ads recopila y comparte con Google:
+    </p>
     <ul>
-        <li>Datos básicos de rendimiento y errores (recopilados por Firebase)</li>
-        <li>Datos de publicidad anonimizados (recopilados por Google AdMob para usuarios gratuitos — no se aplica a usuarios Premium)</li>
+        <li><strong>Identificadores del dispositivo:</strong> ID de publicidad de Android e ID de conjunto de apps</li>
+        <li><strong>Ubicación aproximada</strong>, estimada a partir de la dirección IP</li>
+        <li><strong>Interacciones</strong> con la app y con los anuncios</li>
+        <li><strong>Diagnósticos</strong> de rendimiento</li>
     </ul>
+    <p>
+        Google usa estos datos para mostrar anuncios, medirlos y prevenir fraude. En los países donde la ley lo
+        exige (por ejemplo, la Unión Europea y el Reino Unido), la app te pide tu consentimiento antes de mostrar
+        anuncios personalizados.
+    </p>
 
-    <h3>2.5 Datos que NO recopilamos</h3>
+    <h3>2.7 Datos que NO recopilamos</h3>
     <ul>
-        <li>No recopilamos tu número de teléfono</li>
-        <li>No recopilamos tu ubicación GPS de forma permanente (solo si compartes una ubicación manualmente en el mapa)</li>
+        <li>No recopilamos tu número de teléfono ni tus contactos</li>
+        <li>No guardamos tus mensajes, llamadas ni tu ubicación en servidores</li>
+        <li>No grabamos el audio de las llamadas</li>
         <li>No vendemos tus datos a terceros</li>
-        <li>No accedemos al contenido de tus llamadas de voz (el audio viaja directamente entre dispositivos en la red local, nunca pasa por nuestros servidores)</li>
-        <li>No almacenamos tus mensajes en servidores externos</li>
     </ul>
 
     <!-- ─── 3. USO DE LOS DATOS ────────────────────────────────────────────── -->
@@ -149,73 +188,82 @@
             <th>Finalidad</th>
         </tr>
         <tr>
-            <td>Firebase Auth UID</td>
-            <td>Identificar tu cuenta para sincronizar el estado Premium/Free y evitar el reinicio del período de prueba</td>
+            <td>UID de Firebase (cuenta de Google o anónima)</td>
+            <td>Identificar tu cuenta para validar compras y sincronizar el estado Premium</td>
         </tr>
         <tr>
-            <td>Fecha de creación (createdAt)</td>
-            <td>Calcular los días restantes de prueba gratuita (20 días)</td>
+            <td>Huella cifrada del identificador del teléfono</td>
+            <td>Evitar que la prueba gratuita de 20 días se reinicie al reinstalar la app</td>
         </tr>
         <tr>
-            <td>Token de compra Google Play</td>
-            <td>Validar que la compra es auténtica y evitar el uso de la misma licencia en múltiples cuentas</td>
+            <td>Fecha de creación de la cuenta</td>
+            <td>Calcular los días restantes de prueba gratuita</td>
         </tr>
         <tr>
-            <td>Mensajes y archivos</td>
-            <td>Transmitirlos a otros usuarios en la misma red local. No se almacenan en servidores externos.</td>
+            <td>Token de compra de Google Play</td>
+            <td>Comprobar que la compra es auténtica y limitar que una misma compra se active en demasiadas cuentas</td>
+        </tr>
+        <tr>
+            <td>Mensajes, archivos, voz y ubicación</td>
+            <td>Hacer funcionar el intercomunicador, el chat y el mapa entre los teléfonos conectados. No se guardan en servidores.</td>
         </tr>
         <tr>
             <td>Datos de AdMob</td>
-            <td>Mostrar anuncios relevantes a usuarios gratuitos para monetizar la app</td>
+            <td>Mostrar anuncios a quienes no han comprado Premium, para financiar la app</td>
         </tr>
     </table>
 
     <!-- ─── 4. TERCEROS ───────────────────────────────────────────────────── -->
     <h2>4. Servicios de Terceros</h2>
-    <p>InterCoom utiliza los siguientes servicios de terceros que tienen sus propias políticas de privacidad:</p>
+    <p>InterCoom utiliza los siguientes servicios de terceros, que tienen sus propias políticas de privacidad:</p>
 
-    <h3><span class="chip">Google Firebase</span> Auth, Firestore, Storage, Functions</h3>
+    <h3><span class="chip">Google Firebase</span> Auth, Firestore, Functions</h3>
     <p>
-        Usado para autenticación de usuarios, almacenamiento del estado Premium y validación de compras.
+        Inicio de sesión (con Google o anónimo), estado Premium, registro de la prueba gratuita y validación de compras.
         <a href="https://firebase.google.com/support/privacy" target="_blank">→ Política de privacidad de Firebase</a>
     </p>
 
     <h3><span class="chip">Google AdMob</span> Publicidad</h3>
     <p>
-        Usado para mostrar anuncios (banners y videos) a usuarios gratuitos. AdMob puede recopilar datos
-        del dispositivo para personalizar los anuncios según las leyes aplicables.
-        <a href="https://support.google.com/admob/answer/6128543" target="_blank">→ Política de privacidad de AdMob</a><br>
-        Los usuarios Premium no ven anuncios.
+        Anuncios (banners y videos) para quienes no han comprado Premium, con el formulario de consentimiento de
+        Google donde la ley lo exige. Los usuarios Premium no ven anuncios.
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank">→ Cómo usa Google los datos de las apps que usan sus servicios</a>
     </p>
 
     <h3><span class="chip">Google Play Billing</span> Compras integradas</h3>
     <p>
-        Procesamiento de la compra única de $3.99 para el plan Premium.
+        Procesamiento de la compra única del plan Premium.
         <a href="https://play.google.com/about/play-terms/" target="_blank">→ Términos de Google Play</a>
     </p>
 
-    <h3><span class="chip">Google Nearby Connections</span> Comunicación local</h3>
+    <h3><span class="chip">Wi-Fi Direct y red local</span> Comunicación entre teléfonos</h3>
     <p>
-        Usado para descubrir y conectar dispositivos en la misma red Wi-Fi o Bluetooth.
-        El contenido de las comunicaciones no pasa por servidores de Google.
+        Los teléfonos se descubren y se conectan entre sí sin internet. El contenido de las comunicaciones viaja
+        directamente entre ellos y no pasa por servidores de InterCoom ni de Google.
     </p>
 
     <!-- ─── 5. ALMACENAMIENTO Y SEGURIDAD ──────────────────────────────────── -->
     <h2>5. Almacenamiento y Seguridad de los Datos</h2>
     <ul>
-        <li>Los mensajes de chat se almacenan <strong>localmente</strong> en el dispositivo (base de datos Room cifrada por Android)</li>
-        <li>Las fotos de perfil se guardan en el almacenamiento privado del dispositivo (<code>filesDir</code>), inaccesible para otras apps</li>
-        <li>El estado Premium se almacena en <strong>Firebase Firestore</strong> con reglas de seguridad que impiden modificaciones no autorizadas</li>
-        <li>Los tokens de compra se almacenan en Firestore con acceso exclusivo del backend (nunca del cliente)</li>
-        <li>Las llamadas de voz se transmiten directamente entre dispositivos (peer-to-peer en LAN) — no pasan por servidores externos</li>
+        <li>Mensajes, fotos de perfil y archivos recibidos se guardan en el <strong>almacenamiento privado de la app</strong>
+            en tu teléfono, inaccesible para otras apps y protegido por el cifrado del dispositivo</li>
+        <li>Al vincular un teléfono con PIN, ambos guardan una <strong>clave secreta</strong> en el propio teléfono que
+            comprueba en cada reconexión que nadie se hace pasar por él</li>
+        <li>Los grupos Wi-Fi Direct de InterCoom están protegidos con una contraseña WPA2 que solo conoce quien escanea tu código QR</li>
+        <li>El estado Premium se guarda en Firebase Firestore con reglas de seguridad que impiden modificaciones no autorizadas</li>
+        <li>Los tokens de compra solo son accesibles por nuestro servidor, nunca por la app</li>
+        <li>Los datos que se envían a Firebase y a Google viajan cifrados (TLS)</li>
     </ul>
 
     <!-- ─── 6. RETENCIÓN ──────────────────────────────────────────────────── -->
     <h2>6. Retención de Datos</h2>
     <ul>
-        <li>Los mensajes locales se eliminan si desinstala la app o borra los datos de la app</li>
-        <li>Los datos de la cuenta Firebase (UID, estado Premium) se conservan mientras la cuenta exista</li>
-        <li>Puedes solicitar la eliminación de tu cuenta y datos enviando un correo a <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a></li>
+        <li>Los datos guardados en tu teléfono se eliminan al desinstalar la app o borrar sus datos</li>
+        <li>Los datos de tu cuenta de Firebase (UID, estado Premium) se conservan mientras la cuenta exista</li>
+        <li>El registro de la prueba gratuita (huella cifrada del teléfono y fecha) se conserva para que la prueba no se reinicie</li>
+        <li>Puedes solicitar la eliminación de tu cuenta y tus datos en
+            <a href="https://reos98.github.io/intercoom-privacy/delete_account.html" target="_blank">esta página</a>
+            o escribiendo a <a href="mailto:byrondark36@gmail.com">byrondark36@gmail.com</a></li>
     </ul>
 
     <!-- ─── 7. DERECHOS DEL USUARIO ──────────────────────────────────────── -->
@@ -246,24 +294,22 @@
     <!-- ─── 9. PUBLICIDAD ─────────────────────────────────────────────────── -->
     <h2>9. Publicidad y Cómo Desactivarla</h2>
     <p>
-        Los usuarios de la versión <strong>gratuita</strong> ven anuncios gestionados por Google AdMob.
+        Quienes no han comprado Premium ven anuncios gestionados por Google AdMob.
         Estos anuncios pueden ser personalizados según tus intereses y los datos de tu dispositivo.
     </p>
-    <p>
-        Para optar por no recibir anuncios personalizados de Google:
-        <a href="https://adssettings.google.com" target="_blank">→ Configuración de anuncios de Google</a>
-    </p>
-    <p>
-        Alternativamente, al adquirir el plan <strong>Premium por $3.99</strong>, todos los anuncios
-        se eliminan permanentemente de la aplicación.
-    </p>
+    <ul>
+        <li>Donde la ley lo exige, puedes cambiar tu consentimiento en <strong>Ajustes → Opciones de privacidad</strong> dentro de la app</li>
+        <li>Puedes restablecer o eliminar tu ID de publicidad en los ajustes de Android (Google → Anuncios)</li>
+        <li>Puedes desactivar la personalización en <a href="https://adssettings.google.com" target="_blank">Mi Centro de Anuncios de Google</a></li>
+        <li>Al adquirir el plan <strong>Premium</strong>, los anuncios se eliminan permanentemente</li>
+    </ul>
 
     <!-- ─── 10. CAMBIOS ───────────────────────────────────────────────────── -->
     <h2>10. Cambios en esta Política</h2>
     <p>
         Podemos actualizar esta Política de Privacidad ocasionalmente. Cuando lo hagamos,
-        notificaremos a los usuarios a través de la aplicación y actualizaremos la fecha
-        de "Última actualización" en la parte superior de este documento.
+        actualizaremos la fecha de "Última actualización" en la parte superior de este documento
+        y, si el cambio es importante, lo avisaremos dentro de la aplicación.
         Te recomendamos revisar esta política periódicamente.
     </p>
 
@@ -280,7 +326,7 @@
 </div>
 
 <div class="footer">
-    © 2025 Byron Leonel Montoya Barrionuevo — InterCoom. Todos los derechos reservados.<br>
+    © 2026 Byron Leonel Montoya Barrionuevo — InterCoom. Todos los derechos reservados.<br>
     Esta política está disponible en: <strong>https://reos98.github.io/intercoom-privacy/privacy_policy.html</strong>
 </div>
 
